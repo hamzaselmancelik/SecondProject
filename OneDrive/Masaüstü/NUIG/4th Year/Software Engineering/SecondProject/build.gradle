@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+test {
+    useJUnitPlatform()
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'com.github.hamzaselmancelik:Student-Registration-System:V2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'joda-time:joda-time:2.10.12'
+
+}
